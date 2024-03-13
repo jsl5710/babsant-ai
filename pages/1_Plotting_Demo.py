@@ -19,14 +19,8 @@ from openai import OpenAI
 
 st.title("BabSant.ai")
 
-# Replace 'your_api_key_here' with your actual OpenAI API key
-key = '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'
-
-
-# openai.api_key = key
-client = OpenAI(api_key = key)
-# # Set OpenAI API key from Streamlit secrets
-# client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+# Set OpenAI API key from Streamlit secrets
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # Set a default model
 if "openai_model" not in st.session_state:
